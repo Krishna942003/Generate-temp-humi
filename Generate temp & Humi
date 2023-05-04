@@ -1,0 +1,19 @@
+import random
+import winsound
+
+# Generate random temperature and humidity values between 0 and 100
+temperature = random.randint(0, 100)
+humidity = random.randint(0, 100)
+
+# Set threshold values for temperature and humidity
+temp_threshold = 30
+humid_threshold = 70
+
+# Check if temperature or humidity exceeds the threshold
+if temperature > temp_threshold:
+    print(f"Temperature is too high: {temperature}°C")
+    winsound.PlaySound("SystemExclamation", winsound.SND_ALIAS)
+
+if humidity > humid_threshold:
+    print(f"Humidity is too high: {humidity}%")
+    winsound.PlaySound("SystemExclamation", winsound.SND_ALIAS)
